@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Management System</h1>
+        <div id="main-content">
+            <div id="employee-listing">
+                <h2>Employees</h2>
+                <button onclick="showAddEmployeePage()">Add Employee</button>
+                <div id="employee-list">
+                    <p>No Employees in the system</p>
+                </div>
+            </div>
+            <div id="employee-details" class="hidden">
+                <h2>Employee Details</h2>
+                <p id="employee-info"></p>
+                <button class="btn-back" onclick="showEmployeeListing()">Back to Listing</button>
+            </div>
+            <div id="add-employee" class="hidden">
+                <h2>Add Employee</h2>
+                <form id="employee-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="address-line1">Address Line 1:</label>
+                    <input type="text" id="address-line1" name="address-line1" required>
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country" required>
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" id="zip" name="zip" required>
+                    <label for="contact-method">Contact Method:</label>
+                    <select id="contact-method" name="contact-method" required>
+                        <option value="EMAIL">Email</option>
+                        <option value="PHONE">Phone</option>
+                    </select>
+                    <label for="contact-value">Contact Value:</label>
+                    <input type="text" id="contact-value" name="contact-value" required>
+                    <button type="submit">Add Employee</button>
+                </form>
+                <button class="btn-back" onclick="showEmployeeListing()">Back to Listing</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
